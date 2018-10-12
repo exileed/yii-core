@@ -10,7 +10,7 @@ namespace yii\validators;
 use yii\helpers\Yii;
 
 /**
- * EmailValidator validates that the attribute value is a valid JSON string.
+ * JsonValidator validates that the attribute value is a valid JSON string.
  *
  * @author Dmitriy Kuts <me@exileed.com>
  * @since  3.0.0
