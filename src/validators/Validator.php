@@ -38,6 +38,7 @@ use yii\i18n\I18N;
  * - `image`: [[ImageValidator]]
  * - `in`: [[RangeValidator]]
  * - `integer`: [[NumberValidator]]
+ * - `json`: [[JsonValidator]]
  * - `match`: [[RegularExpressionValidator]]
  * - `required`: [[RequiredValidator]]
  * - `safe`: [[SafeValidator]]
@@ -84,6 +85,7 @@ class Validator extends Component
             '__class' => NumberValidator::class,
             'integerOnly' => true,
         ],
+        'json' => JsonValidator::class,
         'match' => RegularExpressionValidator::class,
         'number' => NumberValidator::class,
         'required' => RequiredValidator::class,
