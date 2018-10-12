@@ -43,6 +43,7 @@ use yii\i18n\I18N;
  * - `safe`: [[SafeValidator]]
  * - `string`: [[StringValidator]]
  * - `trim`: [[FilterValidator]]
+ * - `timezone`: [[TimezoneValidator]]
  * - `unique`: [[UniqueValidator]]
  * - `url`: [[UrlValidator]]
  * - `ip`: [[IpValidator]]
@@ -94,6 +95,7 @@ class Validator extends Component
             'filter' => 'trim',
             'skipOnArray' => true,
         ],
+        'timezone' => TimezoneValidator::class,
         'unique' => UniqueValidator::class,
         'url' => UrlValidator::class,
         'ip' => IpValidator::class,
