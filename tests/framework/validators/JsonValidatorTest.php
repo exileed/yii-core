@@ -30,6 +30,9 @@ class JsonValidatorTest extends TestCase
         $this->assertTrue($val->validate($string));
         $this->assertFalse($val->validate('5'));
         $this->assertFalse($val->validate(null));
+        $this->assertFalse($val->validate(' '));
+        $this->assertFalse($val->validate(''));
+        $this->assertFalse($val->validate(false));
         $this->assertFalse($val->validate([]));
     }
 

@@ -19,6 +19,12 @@ class JsonValidator extends Validator
 {
 
     /**
+     * User specified recursion depth.
+     * @var int
+     */
+    public $dept = 512;
+
+    /**
      * {@inheritdoc}
      */
     public function init(): void
@@ -37,7 +43,8 @@ class JsonValidator extends Validator
         if ( ! is_scalar($value) && ! method_exists($value, '__toString')) {
             return null;
         }
-        json_decode($value);
+        json_decode($value, false, $this->dept);
+
         return (json_last_error() === JSON_ERROR_NONE) ? null : [$this->message, []];
     }
 }
